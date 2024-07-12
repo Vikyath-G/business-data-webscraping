@@ -1,4 +1,3 @@
-
 # Aviation Directory Scraper
 
 This program scrapes aviation company information from the [Aviation Directory](https://aviationdirectory.biz/) and stores the data in an Excel file. The information collected includes the company name, phone number, contact person, email, and website.
@@ -21,14 +20,13 @@ This program scrapes aviation company information from the [Aviation Directory](
 
 3. Download ChromeDriver from the [official ChromeDriver website](https://sites.google.com/a/chromium.org/chromedriver/downloads) and place it in a directory of your choice. Make sure to note the path to the ChromeDriver executable.
 
-4. Create a `settings.py` file and add the following line, replacing `path/to/chromedriver` with the actual path to your ChromeDriver:
+## Usage
+
+1. Open the Python script and enter the path to your ChromeDriver executable in the `CHROMEDRIVER_PATH` variable.
+
     ```python
     CHROMEDRIVER_PATH = 'path/to/chromedriver'
     ```
-
-## Usage
-
-1. Place the `settings.py` file in the same directory as the Python script.
 
 2. Run the script:
     ```bash
@@ -39,17 +37,17 @@ This program scrapes aviation company information from the [Aviation Directory](
 
 ## Script Explanation
 
-- **Imports**: The script imports the necessary modules and the `CHROMEDRIVER_PATH` from the `settings.py` file.
+- **Imports**: The script imports the necessary modules.
     ```python
     from selenium import webdriver
     from selenium.webdriver.common.by import By
     from selenium.common.exceptions import NoSuchElementException
-    from settings import CHROMEDRIVER_PATH
     import pandas as pd
     ```
 
 - **Driver Setup**: Initializes the Chrome WebDriver using the specified path.
     ```python
+    CHROMEDRIVER_PATH = 'path/to/chromedriver'
     driver = webdriver.Chrome(CHROMEDRIVER_PATH)
     ```
 
